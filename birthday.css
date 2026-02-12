@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🌟 Stars */
+.stars {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveStars 60s linear infinite;
+    opacity: 0.8;
+}
+
+.stars.slow {
+    animation-duration: 120s;
+    opacity: 0.5;
+}
+
+.stars.slower {
+    animation-duration: 180s;
+    opacity: 0.3;
+}
+
+@keyframes moveStars {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-500px, 500px); }
+}
+
+/* 🪟 Glass Card */
+.glass-card {
+    position: relative;
+    width: 360px;
+    padding: 35px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 45px rgba(56, 189, 248, 0.25);
+    text-align: center;
+    color: #fff;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* ✨ Text */
+h1 {
+    font-size: 26px;
+    color: #7dd3fc;
+    text-shadow: 0 0 20px #38bdf8;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+h2 span {
+    color: #bae6fd;
+}
+
+p {
+    margin: 12px 0;
+    font-size: 15px;
+    color: #e5e7eb;
+}
+
+.icons {
+    font-size: 34px;
+    margin: 15px 0;
+    animation: bounce 2s infinite;
+}
+
+.wish {
+    font-weight: 500;
+    color: #dbeafe;
+}
+
+.from {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+/* 🎞 Animations */
+@keyframes glow {
+    from { text-shadow: 0 0 10px #38bdf8; }
+    to { text-shadow: 0 0 30px #7dd3fc; }
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
